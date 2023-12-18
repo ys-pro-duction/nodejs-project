@@ -1,0 +1,14 @@
+{
+"version":2,
+
+"builds": [
+{"src":"Weather/index.js",
+"use":""@now/node"
+}],
+"routes":[
+{
+"src":"/(.*)",
+"dest":"Weather/index.js"
+}
+]
+}
