@@ -12,7 +12,7 @@ const query = req.url.split('?')[1];
   // Parse the query string
   const parsedQuery = querystring.parse(query);
   const name = parsedQuery.name;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=73dd03438211920877dde6537c721b1e`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${name ? name : 'Ratangarh'}&appid=73dd03438211920877dde6537c721b1e`
 console.log(url)
   // Get the value of the 'name' query parameter
     if ('/' === '/') {
@@ -38,7 +38,7 @@ console.log(err)
 }
 })
 const start = async () => {
-    server.listen(1234,'127.0.0.1', () => {
+    server.listen(3000,'localhost', () => {
         console.log("server listend");
     })
 }
